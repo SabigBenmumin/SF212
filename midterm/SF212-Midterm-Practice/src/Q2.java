@@ -40,8 +40,22 @@ public class Q2 extends GraphicsProgram {
 	}
 	
 	public void run() {
-		/* You fill this in */
-
+		double window_center = getWidth()/2;
+		for(int r = 0; r < NUM_ROWS; r++) {
+			double x, y, width, height;
+			height = getHeight() / NUM_ROWS;
+			y = getHeight() - (height * (r + 1));
+			width = getWidth() - (STEP_WIDTH * r);
+			x = window_center - (width/2);
+			GRect sq = new GRect(x, y, width,height);
+			sq.setFilled(true);
+			if(r%2 == 0) {
+				sq.setColor(Color.GREEN);
+			}else{
+				sq.setColor(Color.RED);
+			}
+			add(sq);
+		}
 		
 	}
 }
