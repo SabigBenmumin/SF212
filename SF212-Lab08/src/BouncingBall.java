@@ -32,7 +32,6 @@ public class BouncingBall extends GraphicsProgram {
 			double bx, by;
 			bx = ball.getX();
 			by = ball.getY();
-			if(bx < BALL_radius)
 			ball.move(INITIAL_VX, INITIAL_VY);
 			
 			// pause
